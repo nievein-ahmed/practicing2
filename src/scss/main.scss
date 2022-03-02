@@ -1,0 +1,36 @@
+@import "./mixins";
+
+body {
+  background-color: chocolate;
+}
+header {
+  nav {
+    ul {
+      display: flex;
+      justify-content: space-around;
+      width: 50vw;
+      text-decoration: none;
+      li:first-child a {
+        color: rgb(255, 251, 0);
+      }
+      li {
+        list-style: none;
+
+        a {
+          color: black;
+          text-decoration: none;
+          &:hover {
+            color: aqua;
+            background-color: chartreuse;
+          }
+          &::after {
+            content: "hi";
+          }
+          &::before {
+            content: "bye";
+          }
+        }
+      }
+    }
+  }
+}

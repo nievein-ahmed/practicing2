@@ -1,0 +1,136 @@
+@mixin rest-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin box-size {
+  width: 20rem;
+  height: 20rem;
+}
+@mixin div {
+  background-color: aqua;
+}
+@mixin inline-block {
+  display: inline-block;
+}
+@mixin box-size-with-random-val($width, $height) {
+  // scope
+  width: $width;
+  height: $height;
+}
+@mixin pictures {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 500px;
+}
+
+@mixin hide {
+  opacity: 0;
+  visibility: hidden;
+}
+@mixin anime {
+  width: 500px;
+  height: 500px;
+
+  animation-duration: 4s;
+  animation-delay: 2s;
+}
+@mixin revel {
+  opacity: 1;
+  visibility: visible;
+}
+@mixin shadow {
+  box-shadow: 10px 10px 10px 10px;
+  color: chartreuse;
+  width: 800px;
+}
+@mixin rotate {
+  rotate: 50deg;
+}
+@mixin transition {
+  transition: width 2s, height 1s;
+}
+@mixin hover {
+  width: 300px;
+  height: 300px;
+}
+@mixin border-img {
+  border: 10px solid transparent;
+  padding: 15px;
+  border-image: url(./pra3.jpeg) 30 round;
+}
+img {
+  @include border-img();
+}
+
+.box1 {
+  @include center();
+}
+.box2 {
+  @include center();
+}
+
+.box3 {
+  @include center();
+}
+img {
+  @include box-size();
+  display: inline-block;
+}
+.box {
+  @include center();
+}
+img {
+  @include pictures();
+}
+img {
+  @include hover();
+}
+img {
+  @include anime();
+}
+@keyframes anime {
+  0% {
+    background-color: red;
+    left: 0px;
+    top: 0px;
+  }
+  25% {
+    background-color: yellow;
+    left: 200px;
+    top: 0px;
+  }
+  50% {
+    background-color: blue;
+    left: 200px;
+    top: 200px;
+  }
+  75% {
+    background-color: green;
+    left: 0px;
+    top: 200px;
+  }
+  100% {
+    background-color: red;
+    left: 0px;
+    top: 0px;
+  }
+}
+img {
+  @include shadow();
+}
+img {
+  @include rotate();
+}
+img {
+  @include transition();
+}
+img {
+  @include hover();
+}
